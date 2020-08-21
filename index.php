@@ -19,7 +19,7 @@
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="brasil.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
     </nav>
@@ -39,13 +39,21 @@
                 </div>
                 <div class="form-group">
                   <input name="senha" type="password" class="form-control" placeholder="Senha">
-                <?php
-                    if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+
+                <?  if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
                     
                     <div class="text-danger">
                       Usuario ou senha invalido(s)
+                    </div>
                 <? } ?>
-                </div>
+
+                <?  if(isset($_GET['login']) && $_GET['login'] == 'erro2') { ?>
+                    
+                    <div class="text-danger">
+                      Faça login antes de acessar as paginas protegidas
+                    </div>
+                <? } ?>
+                
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
               </form>
             </div>
