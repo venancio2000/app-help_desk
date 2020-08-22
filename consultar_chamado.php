@@ -1,10 +1,5 @@
-<?php
-  session_start();
+<? require_once "validador_acesso.php"?>
 
-  if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'sim') {
-  header('Location: index.php?login=erro2');
-}
-?>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -26,7 +21,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img src="brasil.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Help Desk
+         Help Desk
       </a>
     </nav>
 
